@@ -1,0 +1,57 @@
+body{
+    font-family: cursive;
+    background-image: url("https://media.istockphoto.com/id/1392088708/vector/numbers-pattern-background.jpg?s=612x612&w=0&k=20&c=segx23WkaHnOTlLdizbAMUF-H7P-bpJvkxrjIL4CV-c=");
+    object-fit: contain;
+}
+.card{
+    width: auto;
+    height : auto;
+    border : 1px solid black;
+    border-radius: 1rem;
+    background-image: linear-gradient(to top, #37ecba 0%, #72afd3 100%);
+}
+
+#card-number{
+    font-size: 5rem;
+}
+#score-input-title{
+    font-size: 1.5rem;
+    font-family: cursive !important;
+}
+#score-btn-grp{
+    margin-bottom: 2.5rem;
+}
+#score-btn-grp button{
+    margin-left: 1.5rem;
+}
+#date-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.5rem;
+}
+#card-btn{
+    font-size: 2rem;
+    width: auto;
+    height: auto;
+}
+.user-card_box{
+    width : auto;
+    height : auto;
+    border : 1px solid white;
+    box-shadow: 10px 10px 8px white;
+    padding : 7rem
+}
+
+#message{
+    font-family: "Special Elite", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color : white;
+    font-size : 3.5rem
+}
+#close-btn{
+    position : relative;
+    bottom : 11rem;
+    left : 20rem;
+}
