@@ -55,3 +55,15 @@ body{
     bottom : 11rem;
     left : 20rem;
 }
+
+#logout-btn-box{
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2.5rem;
+}
+ #logout-btn-box span{
+    margin-right: 2rem;
+ }

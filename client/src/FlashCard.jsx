@@ -1,7 +1,7 @@
 import React, { useEffect , useId, useState } from 'react'
 import axios from 'axios'
 import { USER_API } from './url.js'
-import {Button, Popover , Progress} from 'antd'
+import {Button, Popover , Progress } from 'antd'
 import './card.css'
 import { useNavigate } from 'react-router-dom'
 let scores = [0,1,2,3,4,5]
@@ -30,7 +30,7 @@ const FlashCard = ({message}) => {
     if (isScored) return;
     setIsScored(true);
     const token = localStorage.getItem("token")
-    setProgress(prevProgress => ( (prevProgress + 1) / 5) * 100)
+    setProgress(prevProgress => prevProgress + 1) 
     const res = await axios.post(`${USER_API}/card`, 
       { card_num, score }, 
       {
@@ -89,8 +89,8 @@ const FlashCard = ({message}) => {
         { 
         showProgress ? 
         <>
-        <Progress type="circle" percent={progress} strokeColor={twoColors} />
-        <p>You have completed : {progress / 20} / 5   revisions</p>
+        <Progress type="circle" percent={progress * 10} strokeColor={twoColors} />
+        <p>You have completed : {progress} / 10  revisions</p>
         <button id="close-btn" onClick={() => setShowProgress(false)}>Close</button>
         </> 
         :
@@ -121,9 +121,11 @@ const FlashCard = ({message}) => {
         </> 
       }
       </div>
-      <p>Want To Leave ? <button onClick={removeCurrentUser}>Logout</button></p>
+      <div id='logout-btn-box'>
+        <span style={{color : "white" , fontSize : "1.5rem"}}>Want To Leave ?</span>
+        <button onClick={removeCurrentUser}>Logout</button>
+      </div>
     </div>  
-      
     </>
   )
 }
